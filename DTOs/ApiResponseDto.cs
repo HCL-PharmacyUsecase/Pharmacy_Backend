@@ -1,6 +1,8 @@
-﻿namespace Pharmacy.API.DTOs
+﻿namespace Pharmacy.API.DTOs;
+
+public class ApiResponseDto<T>
 {
-    public class ApiResponseDto
-    {
-    }
+    public bool Success { get; set; }
+    public string Message { get; set; } = string.Empty;
+    public T? Data { get; set; }
 }

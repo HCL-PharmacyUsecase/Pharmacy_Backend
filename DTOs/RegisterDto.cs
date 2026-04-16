@@ -1,6 +1,19 @@
-﻿namespace Pharmacy.API.DTOs
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Pharmacy.API.DTOs;
+
+public class RegisterDto
 {
-    public class RegisterDto
-    {
-    }
+    [Required]
+    [MaxLength(100)]
+    public string Name { get; set; } = string.Empty;
+
+    [Required]
+    [EmailAddress]
+    [MaxLength(100)]
+    public string Email { get; set; } = string.Empty;
+
+    [Required]
+    [MinLength(6)]
+    public string Password { get; set; } = string.Empty;
 }

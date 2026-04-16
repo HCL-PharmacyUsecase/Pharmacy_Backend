@@ -1,6 +1,9 @@
-﻿namespace Pharmacy.API.DTOs
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Pharmacy.API.DTOs;
+
+public class UploadPrescriptionDto
 {
-    public class UploadPrescriptionDto
-    {
-    }
+    [Required]
+    public IFormFile File { get; set; } = null!;
 }
